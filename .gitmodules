@@ -1,0 +1,6 @@
+[submodule "chrome/tweetdeck_emoji"]
+	path = chrome/tweetdeck_emoji
+	url = https://github.com/JF1HNL/tweetdeck_emoji.git
+[submodule "chrome/markdown-link"]
+	path = chrome/markdown-link
+	url = https://github.com/JF1HNL/markdown-link.git
