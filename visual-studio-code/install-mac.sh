@@ -1,4 +1,4 @@
-cd ~/.config/Code/User/
+cd ~/Library/Application\ Support/Code/User
 
 # 前の設定をバックアップ
 mv settings.json settings.json.bak
