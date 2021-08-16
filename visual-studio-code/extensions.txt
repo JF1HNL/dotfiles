@@ -1,1 +1,9 @@
+8amjp.charactercount
+GrapeCity.gc-excelviewer
+Ikuyadeu.r
+James-Yu.latex-workshop
+ms-python.python
+ms-python.vscode-pylance
+ms-toolsai.jupyter
+octref.vetur
 yzane.markdown-pdf
