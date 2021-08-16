@@ -10,7 +10,7 @@ mv snippets snippets.bak
 #
 # 元の設定ファイルの代わりにシンボリックリンクを置いておく
 ln -sf ~/dotfiles/visual-studio-code/settings.json settings.json
-ln -sf ~/dotfiles/visual-studio-code/keybindings.json keybindings.json
+# ln -sf ~/dotfiles/visual-studio-code/keybindings.json keybindings.json
 ln -sf ~/dotfiles/visual-studio-code/snippets snippets
 
 # 他マシンで書き出されたエクステンション一覧を使ってインストール
