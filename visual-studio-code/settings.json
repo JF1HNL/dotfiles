@@ -34,7 +34,7 @@
 
   // 使用パッケージのコマンドや環境の補完を有効にする
   "latex-workshop.intellisense.package.enabled": true,
-
+  "latex-workshop.latex.clean.enabled": true,
   // 生成ファイルを削除するときに対象とするファイル
   // デフォルト値に "*.synctex.gz" を追加
   "latex-workshop.latex.clean.fileTypes": [
@@ -90,16 +90,15 @@
     },
   ],
   "latex-workshop.view.pdf.viewer": "tab",
-  "editor.tabSize": 2,
   "editor.renderControlCharacters": false,
   "timeline.excludeSources": [
     "git-history"
   ],
-  "editor.renderWhitespace": "boundary",
   "workbench.editorAssociations": [
     {
       "viewType": "jupyter.notebook.ipynb",
       "filenamePattern": "*.ipynb"
     }
-  ]
+  ],
+  "latex-workshop.latex.autoClean.run": "onBuilt"
 }
