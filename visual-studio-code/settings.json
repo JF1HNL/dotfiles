@@ -34,7 +34,7 @@
 
   // 使用パッケージのコマンドや環境の補完を有効にする
   "latex-workshop.intellisense.package.enabled": true,
-  "latex-workshop.latex.clean.enabled": true,
+
   // 生成ファイルを削除するときに対象とするファイル
   // デフォルト値に "*.synctex.gz" を追加
   "latex-workshop.latex.clean.fileTypes": [
@@ -74,31 +74,68 @@
         "latexmk"
       ]
     },
+    {
+      "name": "platex",
+      "tools": [
+        "platex",
+        "dvipdfmx"
+      ]
+    }
   ],
-
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  
   // ビルドのレシピに使われるパーツ
   "latex-workshop.latex.tools": [
+
+    
+  //   {
+  //     "name" : "latexmk",
+  //     "command" : "wsl.exe",
+  //     "args" : [
+  //         "latexmk",
+  //         "%DOCFILE%.tex" 
+  //     ]
+  // },
+
+  {
+    "name": "latexmk",
+    "command": "latexmk",
+    "args": [
+      "-interaction=nonstopmod",
+      "-silent",
+      "-halt-on-error",
+      "-outdir=%OUTDIR%",
+      "%DOC%"
+    ],
+  },
     {
-      "name": "latexmk",
-      "command": "latexmk",
+      "name": "platex",
+      "command": "platex",
       "args": [
-        "-interaction=nonstopmod",
-        "-silent",
-        "-outdir=%OUTDIR%",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-kanji=utf8",
+        "-shell-escape",
         "%DOC%"
-      ],
+      ]
     },
+    {
+      "name": "dvipdfmx",
+      "command": "dvipdfmx",
+      "args": [
+        "%DOCFILE%.dvi"
+      ]
+    }
   ],
   "latex-workshop.view.pdf.viewer": "tab",
   "editor.renderControlCharacters": false,
   "timeline.excludeSources": [
     "git-history"
   ],
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
-  "latex-workshop.latex.autoClean.run": "onBuilt"
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "markdown.preview.breaks": true
 }
