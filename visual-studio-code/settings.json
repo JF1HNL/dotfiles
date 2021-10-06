@@ -74,32 +74,70 @@
         "latexmk"
       ]
     },
+    {
+      "name": "platex",
+      "tools": [
+        "platex",
+        "dvipdfmx"
+      ]
+    }
   ],
-
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  
   // ビルドのレシピに使われるパーツ
   "latex-workshop.latex.tools": [
+
+    
+  //   {
+  //     "name" : "latexmk",
+  //     "command" : "wsl.exe",
+  //     "args" : [
+  //         "latexmk",
+  //         "%DOCFILE%.tex" 
+  //     ]
+  // },
+
+  {
+    "name": "latexmk",
+    "command": "latexmk",
+    "args": [
+      "-interaction=nonstopmod",
+      "-silent",
+      "-halt-on-error",
+      "-outdir=%OUTDIR%",
+      "%DOC%"
+    ],
+  },
     {
-      "name": "latexmk",
-      "command": "latexmk",
+      "name": "platex",
+      "command": "platex",
       "args": [
-        "-interaction=nonstopmod",
-        "-silent",
-        "-outdir=%OUTDIR%",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-kanji=utf8",
+        "-shell-escape",
         "%DOC%"
-      ],
+      ]
     },
+    {
+      "name": "dvipdfmx",
+      "command": "dvipdfmx",
+      "args": [
+        "%DOCFILE%.dvi"
+      ]
+    }
   ],
   "latex-workshop.view.pdf.viewer": "tab",
-  "editor.tabSize": 2,
   "editor.renderControlCharacters": false,
   "timeline.excludeSources": [
     "git-history"
   ],
-  "editor.renderWhitespace": "boundary",
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ]
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "markdown.preview.breaks": true,
+  "markdown-pdf.breaks": true,
+  "markdown-pdf.headerTemplate": "<span class='title' style='display: none;'></span>" 
 }
