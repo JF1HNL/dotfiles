@@ -139,5 +139,5 @@
   "latex-workshop.latex.autoBuild.run": "onSave",
   "markdown.preview.breaks": true,
   "markdown-pdf.breaks": true,
-  "markdown-pdf.headerTemplate": "<span class='title' style='display: none;'></span>" 
+  "markdown-pdf.headerTemplate": "<span class='title' style='display: none;'></span>"
 }
