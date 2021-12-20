@@ -2,8 +2,10 @@
 GrapeCity.gc-excelviewer
 Ikuyadeu.r
 James-Yu.latex-workshop
+mosapride.zenkaku
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
 octref.vetur
 yzane.markdown-pdf
