@@ -2,8 +2,6 @@
 GrapeCity.gc-excelviewer
 Ikuyadeu.r
 James-Yu.latex-workshop
-marp-team.marp-vscode
-mosapride.zenkaku
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
