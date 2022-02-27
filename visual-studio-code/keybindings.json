@@ -68,5 +68,11 @@
     "key": "ctrl+d",
     "command": "-editor.action.addSelectionToNextFindMatch",
     "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "type",
+    "args": {"text": "\t"},
+    "when": "editorFocus"
   }
 ]
