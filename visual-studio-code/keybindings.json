@@ -79,5 +79,13 @@
     "key" : "ctrl+shift+c",
     "command": "extension.copyFileContent",
     "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+shift+a",
+    "command": "editor.action.selectAll"
+  },
+  {
+    "key": "ctrl+a",
+    "command": "-editor.action.selectAll"
   }
 ]
