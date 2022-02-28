@@ -3,6 +3,7 @@ evilz.vscode-reveal
 GrapeCity.gc-excelviewer
 Ikuyadeu.r
 James-Yu.latex-workshop
+Kaboyi.copyFileContent
 marp-team.marp-vscode
 mosapride.zenkaku
 ms-python.python

@@ -74,5 +74,10 @@
     "command": "type",
     "args": {"text": "\t"},
     "when": "editorFocus"
+  },
+  {
+    "key" : "ctrl+shift+c",
+    "command": "extension.copyFileContent",
+    "when": "editorFocus"
   }
 ]
